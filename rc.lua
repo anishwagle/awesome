@@ -93,7 +93,7 @@ local vi_focus     = false -- vi-like client focus - https://github.com/lcpz/awe
 local cycle_prev   = true -- cycle trough all previous client or just the first -- https://github.com/lcpz/awesome-copycats/issues/274
 local editor       = os.getenv("EDITOR") or "vim"
 local gui_editor   = os.getenv("GUI_EDITOR") or "gvim"
-local browser      = os.getenv("BROWSER") or "midori"
+local browser      = os.getenv("BROWSER") or "firefox"
 local scrlocker    = "slock"
 
 awful.util.terminal = terminal
@@ -778,4 +778,4 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 -- possible workaround for tag preservation when switching back to default screen:
 -- https://github.com/lcpz/awesome-copycats/issues/251
 -- }}}
-run_once({ "variety", "picom","nm-applet &" }) -- entries must be separated by commas
+run_once({ "variety", "picom","nm-applet &","xinput set-prop 'DLL0641:00 06CB:7621 Touchpad' 'libinput Tapping Enabled' 1" }) -- entries must be separated by commas
