@@ -526,6 +526,8 @@ awful.key({ modkey }, "q", function () awful.spawn("brave") end,
 awful.key({ modkey }, "a", function () awful.spawn(gui_editor) end,
 {description = "run gui editor", group = "launcher"}),
 
+awful.key({ modkey, "Shift"   }, "d", function () awful.spawn("xfce4-appfinder")    end,
+{description = "app menu", group = "launcher"}),
 -- Default
 --[[ Menubar
 awful.key({ modkey }, "p", function() menubar.show() end,
